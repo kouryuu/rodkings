@@ -1,0 +1,6 @@
+Action vs Information
+=====================
+
+The proposal
+
+A typical user interface has many different types components,some of them "do stuff" other are just there to give information about something.We have learned to discern different
