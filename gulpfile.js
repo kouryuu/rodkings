@@ -1,16 +1,17 @@
 var gulp = require('gulp');
 // Live reaload
+
+
+
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var jade = require('gulp-jade');
-var markdown = require('gulp-markdown');
 // FS magic
 var fs = require('fs');
 var sys = require('sys');
 var exec = require('child_process').exec;
 var colors = require('colors');
 var child;
-var tags = require('./tags.json');
 // Function that cleans the names to put in the JSON file
 var cleanName = (function(dirty){
   clean = dirty.split('/');
@@ -27,39 +28,21 @@ gulp.task('compileJade', function() {
   .pipe(gulp.dest('build/'));
 });
 
-gulp.task('compileMarkdown',function(){
-  gulp.src('./*/*.md')
-  .pipe(markdown())
-  .pipe(gulp.dest('build/posts/'));
-})
-gulp.task('generateJSON',function() {
-  post_tags = tags.tags;
-  json = '{';
-  posts_left = post_tags.length;
 
-  // for(i=0;i < post_tags.length ; i ++){
-    console.log('ls -1 ./'+post_tags[0]+'/*.md');
-  child = exec('ls -1 ./UX/*.md',function(error,stdout,stderr){
-    console.log('i am here');
+gulp.task('generateJSON',function() {
+  child = exec('ls -1 ./*/*.md',function(error,stdout,stderr){
     var posts = Array();
      posts = stdout.split('\n');
      posts.pop();
      posts = posts.map(cleanName);
-     posts_left = posts_left - 1;
-     return JSON.stringify(post_tags[i])+':' + JSON.stringify(posts);
-  });
-  // }
-  while(posts_left > 0){
-    //console.log(posts_left);
+     json = '{'+JSON.stringify(posts)+'}';
 
-  }
-  json += JSON.stringify(child) + '}';
-  fs.writeFile('posts.json', json, function (err) {
+     fs.writeFile('posts.json', json, function (err) {
     if (err) return console.log(err.red);
     console.log('[Wrote] to '.green +'posts.json'.cyan);
+    });
+
   });
-  gulp.src('posts.json')
-  .pipe(gulp.dest('build/ajax/'));
 });
 gulp.task('compress',function() {
   console.log('compressing.');
@@ -86,7 +69,7 @@ gulp.task('serve', function(){
 });
 
 gulp.task('default', function() {
-console.log(tags.tags);
+console.log('testing');
 
 
 });
