@@ -23,7 +23,7 @@ html(lang="en",ng-app="Blog")
                 li
                   a(href="#") Code
                 li
-                  a(href="#") Software Engineering6
+                  a(href="#") Software Engineering
                 li
                   a(href='#') About Me
       .container-fluid
@@ -34,11 +34,9 @@ html(lang="en",ng-app="Blog")
               &nbsp;A blog about User Experience, Coding & Computer Science stuff.
         div#content(ng-controller="mainContent")
           h1.centered {{ title }}
+            posts
             
 
 
-    script(src='scripts/jquery.min.js')
-    script(src='scripts/google-analytics.js')
-    script(src='scripts/flat-ui.js')
-    script(src='scripts/angular.min.js')
+    include scripts.jade
     script(src='scripts/app.js')
