@@ -2,8 +2,7 @@ var gulp = require('gulp');
 // Live reaload
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
-var jade = require('gulp-jade');
-var markdown = require('gulp-markdown');
+var exec = require('child_process').exec;
 // FS magic
 var fs = require('fs');
 var sys = require('sys');
@@ -11,30 +10,14 @@ var exec = require('child_process').exec;
 var colors = require('colors');
 var child;
 
-// Function that cleans the names to put in the JSON file
-var cleanName = (function(dirty){
-  clean = dirty.split('/');
-  clean = clean[clean.length - 1];
-  clean = clean.split('.md');
-  clean = clean[0];
-  return clean;
-});
 
-gulp.task('compileJade', function() {
-  console.log('compiling..');
-  gulp.src('templates/*.jade')
-  .pipe(jade())
-  .pipe(gulp.dest('build/'));
-});
 
-gulp.task('compileMarkdown',function(){
-  gulp.src('./posts/*.md')
-  .pipe(markdown())
-  .pipe(gulp.dest('build/posts/'));
+gulp.task('metalsmith', function() {
+  exec('node_modules/metalsmith/bin/metalsmith', function (err, stdout, stderr) {
+    console.log(stdout.yellow);
+    console.log(stderr.red);
 
-})
-gulp.task('generateJSON',function() {
-
+  });
 });
 gulp.task('compress',function() {
   console.log('[compressing] '+'JS'.yellow);
@@ -45,6 +28,10 @@ gulp.task('compress',function() {
   console.log('[compressing] '+'Styles'.yellow);
   gulp.src('styles/*.css')
   .pipe(gulp.dest('build/styles/'));
+  console.log('[copying] '+'Fonts'.yellow);
+  gulp.src('fonts/**')
+  .pipe(gulp.dest('build/fonts/'));
+
 });
 gulp.task('imgcopy',function() {
   gulp.src('imgs/*')
@@ -60,5 +47,6 @@ gulp.task('serve', function(){
   });
   gulp.watch(['*.html', 'styles/**/*.css', 'scripts/**/*.js'], {cwd: './build'}, ['compress',reload]);
   gulp.watch(['*.html', 'styles/**/*.css', 'scripts/**/*.js'], {cwd: '.'}, ['compress',reload]);
-  gulp.watch(['*.jade'],{cwd:'./templates'},['compileJade','compress']);
+  gulp.watch(['templates/*.jade'],{cwd:'./templates'},['metalsmith','compress']);
+  gulp.watch(['contents/*.md'],{cwd:'./templates'},['metalsmith']);
 });
