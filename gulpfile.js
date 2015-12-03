@@ -37,6 +37,7 @@ gulp.task('imgcopy',function() {
   gulp.src('imgs/*')
   .pipe(gulp.dest('build/imgs/'));
 });
+gulp.task('generate',['metalsmith','compress','imgcopy']);
 gulp.task('serve', function(){
   browserSync({
     port: 8081,
@@ -45,8 +46,8 @@ gulp.task('serve', function(){
       baseDir: './build'
     }
   });
-  gulp.watch(['*.html', 'styles/**/*.css', 'scripts/**/*.js'], {cwd: './build'}, ['compress',reload]);
-  gulp.watch(['*.html', 'styles/**/*.css', 'scripts/**/*.js'], {cwd: '.'}, ['compress',reload]);
-  gulp.watch(['templates/*.jade'],{cwd:'./templates'},['metalsmith','compress']);
-  gulp.watch(['contents/*.md'],{cwd:'./templates'},['metalsmith']);
+  gulp.watch(['*.html', 'styles/**/*.css', 'scripts/**/*.js'], {cwd: './build'}, ['metalsmith','compress',reload]);
+  gulp.watch(['*.html', 'styles/**/*.css', 'scripts/**/*.js'], {cwd: '.'}, ['metalsmith','compress',reload]);
+  gulp.watch(['templates/*.jade'],{cwd:'./templates'},['metalsmith','compress',reload]);
+  gulp.watch(['contents/*.md'],{cwd:'./templates'},['metalsmith','compress',reload]);
 });

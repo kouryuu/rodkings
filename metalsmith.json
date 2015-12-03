@@ -1,8 +1,8 @@
 {
   "source": "./contents",
   "metadata": {
-    "title": "My Wintersmith-Powered Blog",
-    "description": "My second, super-cool, Wintersmith-powered blog."
+    "title": "Rodkings",
+    "description": "A blog about User Experience, Coding & Computer Science stuff."
   },
   "plugins": {
     "metalsmith-markdown": {},

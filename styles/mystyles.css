@@ -15,3 +15,10 @@ h1 {
   margin-left: 5%;
   margin-right: 5%;
 }
+.ghost-img{
+  opacity: 0.4;
+}
+.code-img{
+  background-image: url('/imgs/codes.jpg');
+  height: 500px;
+}

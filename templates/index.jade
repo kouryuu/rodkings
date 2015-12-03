@@ -15,7 +15,7 @@ html(lang="en",ng-app="Blog")
             .navbar-header
               button.btn.navbar-toggle(type="button", data-toggle="collapse", data-target=".navbar-collapse")
                 span.sr-only
-              a.navbar-brand(href="index.html") Rodkings
+              a.navbar-brand(href="/")=title
             .navbar-collapse.collapse
               ul.nav.navbar-nav
                 li
@@ -25,7 +25,9 @@ html(lang="en",ng-app="Blog")
                 li
                   a(href="#") Software Engineering
                 li
-                  a(href='#') About Me
+                  a(href="/talks") Talks
+                li
+                  a(href='/about') About Me
       .container-fluid
         .col-md-12.hidden-xs
           div.big-img
@@ -33,7 +35,10 @@ html(lang="en",ng-app="Blog")
               <br/>
               &nbsp;A blog about User Experience, Coding & Computer Science stuff.
         div#content(ng-controller="mainContent")
-          h1.centered
+          br
+          br
+          br
+          h2.centered Recent Posts
             posts
             
 
