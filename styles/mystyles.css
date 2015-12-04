@@ -22,3 +22,6 @@ h1 {
   background-image: url('/imgs/codes.jpg');
   height: 500px;
 }
+.justified{
+  text-align: justify;
+}

@@ -19,6 +19,7 @@ Description of the proyect.
 - [Metalsmith](http://www.metalsmith.io)
 - [Jade](http://jade-lang.com)
 - [Markdown](http://daringfireball.net/projects/markdown/)
+- [AngularJS](https://angularjs.org/)
 
 #### How to use
 1. `npm install`
