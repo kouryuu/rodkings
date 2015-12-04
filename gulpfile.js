@@ -37,6 +37,10 @@ gulp.task('imgcopy',function() {
   gulp.src('imgs/*')
   .pipe(gulp.dest('build/imgs/'));
 });
+gulp.task('jsoncopy',function() {
+  gulp.src('posts.json')
+  .pipe(gulp.dest('build/'));
+});
 gulp.task('generate',['metalsmith','compress','imgcopy']);
 gulp.task('serve', function(){
   browserSync({

@@ -39,7 +39,14 @@ html(lang="en",ng-app="Blog")
           br
           br
           h2.centered Recent Posts
-            posts
+          br
+          div.centered(ng-repeat="post in posts")
+            a(href="{{ post.url }}")
+              h3 {{ post.title }}
+            span {{ post.teaser }}
+            br
+            br
+            a.btn.btn-primary(href="{{ post.url }}") Read article
             
 
 
