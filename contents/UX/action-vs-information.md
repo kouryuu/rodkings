@@ -31,7 +31,7 @@ may be classified as **Actionable** or **Informational** elements (or both) and 
  be distiguishable from one another.
 
 Identifying the problems
-======================
+-----------------------
 
 The examples seen on the introduction are so typical and intuitive that most people will have no
 problem identifying the actions of such elements.
@@ -49,6 +49,6 @@ When too many *actionable* elements are present the user may have some cognitive
 
 
 Experiments
-===========
+-----------
 
 
