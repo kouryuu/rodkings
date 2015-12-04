@@ -1,0 +1,8 @@
+BEGIN:VCARD
+VERSION:4.0
+N:Reyes;Rodrigo;;;
+ORG:Plethora
+PHOTO;MEDIATYPE=image/jpeg:http://rodkings.plethora.com.mx/imgs/rodkings.jpg
+TEL;TYPE=IPHONE,voice;VALUE=uri:(+52)5542829181
+EMAIL:rodrigo@plethora.com.mx
+END:VCARD
