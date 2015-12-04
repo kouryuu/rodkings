@@ -1,4 +1,12 @@
 {
   "UX":
-  [{"title":"Action vs Information","teaser":"In this article I talk about how different types of UI elements interact with the end user.","date":"3/12/2015","url":"UX/action-vs-information/"}]
+  [{"title":"Action vs Information",
+  "teaser":"In this article I talk about how different types of UI elements interact with the end user.",
+  "date":"3/12/2015",
+  "url":"UX/action-vs-information/"}],
+  "LifeHacks":
+  [{"title":"Workout Hack",
+  "teaser":"How I managed to workout everyday while being as busy as usual",
+  "date":"4/12/2015",
+  "url":"LifeHacks/workout-hack/"}]
 }
