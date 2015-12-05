@@ -26,13 +26,9 @@ myApp.controller('mainContent',['$scope','$http','$log',function($scope,$http,$l
         $scope.posts.push(postCategory[j]);
       }
     }
-    $log.log($scope.posts);
-
-    //response.data
-
 
     }, function errorCallback(response) {
-
+      $scope.posts = [{"title":"Something went wrong while retrieving posts.","teaser":"Try refreshing your browser."}]
     });
 
 

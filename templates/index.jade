@@ -36,7 +36,7 @@ html(lang="en",ng-app="Blog")
             h1.
               <br/>
               &nbsp;A blog about User Experience, Coding & Computer Science stuff.
-        div.ng-cloak#content(ng-controller="mainContent")
+        div.ng-cloak.post-list#content(ng-controller="mainContent")
           br
           br
           br
@@ -48,7 +48,8 @@ html(lang="en",ng-app="Blog")
             span {{ post.teaser }}
             br
             br
-            a.btn.btn-primary(href="{{ post.url }}") Read article
+            hr
+            //a.btn.btn-primary(href="{{ post.url }}") Read article
             
 
 
