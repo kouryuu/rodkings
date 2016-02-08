@@ -6,3 +6,4 @@ bower_components
 test/bower_components
 Flat-UI-master
 build/*
+npm-debug.log
