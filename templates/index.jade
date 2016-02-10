@@ -36,18 +36,18 @@ html(lang="en",ng-app="Blog")
             h1.
               <br/>
               &nbsp;A blog about User Experience, Coding & Computer Science stuff.
-        div.ng-cloak.post-list#content(ng-controller="mainContent")
+        div.ng-cloak.post-list#content(ng-controller="mainContent",ng-cloak)
           br
           br
           br
           h2.centered Recent Posts &nbsp;&nbsp;
             small
-              span.label.label-warning {{ tag }}
+              span.label.label-warning.ng-cloak {{ tag }}
           br
           div.centered(ng-repeat="post in posts")
             a(href="{{ post.url }}")
-              h3 {{ post.title }}
-            span {{ post.teaser }}
+              h3.ng-cloak {{ post.title }}
+            span.ng-cloak {{ post.teaser }}
             br
             br
             hr
