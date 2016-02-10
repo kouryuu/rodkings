@@ -34,17 +34,20 @@ myApp.controller('mainContent',['$scope','$http','$log',function($scope,$http,$l
         $scope.posts.push(postCategory[j]);
       }
     }
-    $log.log($scope.posts)
+    $scope.$apply();
   });
   var getPosts = (function(){
     $http({
     method: 'GET',
     url: '/posts.json'
       }).then(function successCallback(response) {
-      // if(location.hash == ""){
-      //   drawAll(response);
-      // }
-      drawPosts(true,null,response);
+       if(location.hash == ""){
+         drawAll(response);
+       }else{
+        var tag = location.hash;
+        tag = tag.replace("#","");
+        generateJSONbyTag(tag);
+       }
       $scope.postJSON = response;
 
 
@@ -60,33 +63,20 @@ myApp.controller('mainContent',['$scope','$http','$log',function($scope,$http,$l
     $(window).hashchange( function(){
 
       var tag = location.hash;
-      if(tag == "#UX"){
-          $scope.tag = "UX";
-
-        $log.log($scope.postJSON);
-
-          drawPosts(false,'UX',$scope.postJSON);
-        $scope.$apply();
+      tag = tag.replace("#","");
+      $log.log(tag);
+      generateJSONbyTag(tag);
 
 
-        }
-      
     });
+    var generateJSONbyTag = (function (tag){
+        $scope.tag = tag;
+        $log.log($scope.postJSON);
+        drawPosts(false,tag,$scope.postJSON);
+
+
+
+
+    })
 
 }]);
-
-
-// var route = crossroads.addRoute('#{tag}',function(tag){
-//   console.log(tag);
-// });
-// route.matched.add(console.log, console);
-
-$(function(){
-
-  // Bind the event.
-
-
-  // Trigger the event (useful on page load).
-  $(window).hashchange();
-
-});
