@@ -44,6 +44,7 @@ myApp.controller('mainContent',['$scope','$http','$log',function($scope,$http,$l
        if(location.hash == ""){
          drawAll(response);
        }else{
+         $log.log(response);
         var tag = location.hash;
         tag = tag.replace("#","");
         generateJSONbyTag(tag);
