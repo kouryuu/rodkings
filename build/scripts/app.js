@@ -44,11 +44,14 @@ myApp.controller('mainContent',['$scope','$http','$log',function($scope,$http,$l
        if(location.hash == ""){
          drawAll(response);
        }else{
+
+         $log.log(response);
         var tag = location.hash;
         tag = tag.replace("#","");
-        generateJSONbyTag(tag);
+        generateJSONbyTag(tag,response);
+        $scope.postJSON = response;
        }
-      $scope.postJSON = response;
+
 
 
     }, function errorCallback(response) {
@@ -61,22 +64,11 @@ myApp.controller('mainContent',['$scope','$http','$log',function($scope,$http,$l
         drawPosts(true,null,response);
       });
     $(window).hashchange( function(){
-
-      var tag = location.hash;
-      tag = tag.replace("#","");
-      $log.log(tag);
-      generateJSONbyTag(tag);
-
-
+      getPosts();
     });
-    var generateJSONbyTag = (function (tag){
+    var generateJSONbyTag = (function (tag,postsJSON){
         $scope.tag = tag;
-        $log.log($scope.postJSON);
-        drawPosts(false,tag,$scope.postJSON);
-
-
-
-
+        drawPosts(false,tag,postsJSON);
     })
 
 }]);
