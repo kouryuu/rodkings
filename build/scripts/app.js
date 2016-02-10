@@ -27,6 +27,12 @@ myApp.controller('mainContent',['$scope','$http','$log',function($scope,$http,$l
       }
       else{
         postCategory = response.data[tag];
+        if(postCategory === undefined){
+          $scope.postJSON = {};
+          $scope.posts = [{"title":"There seems to be no posts for that tag.","teaser":"I hope to write some in the future; in the meantime, browse a different category."}];
+          $scope.$apply();
+          break;
+        }
 
       }
       for(j=0;j < postCategory.length;j++){
