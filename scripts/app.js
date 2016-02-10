@@ -1,9 +1,10 @@
 var myApp = angular.module('Blog',[]);
 
 myApp.controller('mainContent',['$scope','$http','$log',function($scope,$http,$log){
+  $scope.tag = "All"
   $scope.posts = [];
   $scope.error = false;
-  var drawPosts = function (all,tag,response){
+  var drawPosts = (function (all,tag,response){
     // Check the keys in the array and stores it in categories
     $scope.categories = [];
     Object.keys(response.data).forEach(
@@ -34,12 +35,16 @@ myApp.controller('mainContent',['$scope','$http','$log',function($scope,$http,$l
       }
     }
     $log.log($scope.posts)
-  }
-  getPosts = function(){
+  });
+  var getPosts = (function(){
     $http({
     method: 'GET',
     url: '/posts.json'
       }).then(function successCallback(response) {
+      // if(location.hash == ""){
+      //   drawAll(response);
+      // }
+      drawPosts(true,null,response);
       $scope.postJSON = response;
 
 
@@ -47,19 +52,25 @@ myApp.controller('mainContent',['$scope','$http','$log',function($scope,$http,$l
       $scope.postJSON = {};
       $scope.posts = [{"title":"Something went wrong while retrieving posts.","teaser":"Try refreshing your browser."}]
     });
-    }
-    drawPosts(true,null,$scope.postJSON);
+  });
+    getPosts();
+    var drawAll = (function (response) {
+        drawPosts(true,null,response);
+      });
     $(window).hashchange( function(){
 
       var tag = location.hash;
-      if(tag != "#UX"){
-        $log.log('Hola')
-        if($scope.postJSON != undefined && $scope.postJSON != {}){
+      if(tag == "#UX"){
+          $scope.tag = "UX";
+
+        $log.log($scope.postJSON);
+
           drawPosts(false,'UX',$scope.postJSON);
-        }else{
-          $scope.posts = [{"title":"Something went wrong while retrieving posts.","teaser":"Try refreshing your browser."}]
+        $scope.$apply();
+
+
         }
-      }
+      
     });
 
 }]);

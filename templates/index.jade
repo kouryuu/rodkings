@@ -40,7 +40,7 @@ html(lang="en",ng-app="Blog")
           br
           br
           br
-          h2.centered Recent Posts
+          h2.centered Recent Posts {{ tag }}
           br
           div.centered(ng-repeat="post in posts")
             a(href="{{ post.url }}")
