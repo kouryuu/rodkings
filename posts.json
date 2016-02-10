@@ -8,5 +8,10 @@
   [{"title":"Workout Hack",
   "teaser":"How I managed to workout everyday while being as busy as usual",
   "date":"4/12/2015",
-  "url":"LifeHacks/workout-hack/"}]
+  "url":"LifeHacks/workout-hack/"}],
+  "Code":
+  [{"title":"The making of this blog.",
+    "teaser": "The blog you are reading right now has recent technology and frameworks, I dive in to the development process.",
+  "date":"9/01/2016",
+  "url":"Code/the-making-of-this-blog/"}]
 }

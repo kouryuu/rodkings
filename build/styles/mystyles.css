@@ -42,3 +42,9 @@ h1 {
 .post-list hr{
   width:35%;
 }
+.label-tag{
+  background-color: #bdc3c7;
+}
+#recent-posts{
+  padding-top: 5.168px;
+}
