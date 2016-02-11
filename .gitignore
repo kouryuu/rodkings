@@ -7,3 +7,5 @@ test/bower_components
 Flat-UI-master
 build/*
 npm-debug.log
+deploy.sh
+
