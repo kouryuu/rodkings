@@ -8,7 +8,7 @@ If you are looking for the actual blog please refer to [this site](http://rodkin
 If you wish to contribute please contact me [here](mailto:rodrigo@plethora.com.mx).
 
 
-Description of the proyect.
+Description of the project.
 ---------------------------
 
 #### Technologies used:
