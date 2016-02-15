@@ -21,3 +21,22 @@ Having complete liberty to use any programming language and tool, I decided to b
 
 So the journey begins...
 
+Software Analysis
+------------------------------
+
+I made an extensive research on different platforms and software such as:
+
+- Jekyll
+- Octopress
+- Wordpress
+- Drupal
+- Wintersmith
+- Metalsmith
+
+So both **Jekyll** and **Octopress** seemed like a good idea, the thing that bothered me though was that both already had a directory structure (I like to make my own conventions and organise my stuff however I like) and changing some behaviours seemed bothersome.
+
+Both **Drupal** and **Wordpress** are quite popular and powerful and being a Drupal power user I could easily create it with Drupal, the thing with CMS is that firstly there is a lot of files and bloated code.Second of all nothing beats the speed of static files and altough there are caching strategies that could make both almost as fast, there is still some overhead processing.
+
+So then I gave a chance to both **Wintersmith** and **Metalsmith**.I explored **Wintersmith** first due to it being described as a "*Flexible, minimalistic, multi-platform static site generator built on top of node.js.*" , so I gave it a go.
+
+
