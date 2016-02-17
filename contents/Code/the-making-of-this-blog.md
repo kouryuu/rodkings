@@ -57,7 +57,7 @@ The road ahead
 So the blog is far from finished I have several functionalities I will implement when I could invest some time in the coding.
 These are my top priorities:
 
-- [ ]Code highlighting with readable fonts.
+- [ ] Code highlighting with readable fonts.
 - [ ] Accessibility options, such as increasing font size and contrast
 - [ ] Translations (either automatic or with different source versions)
 - [ ] Smartphone gestures and optimizations
