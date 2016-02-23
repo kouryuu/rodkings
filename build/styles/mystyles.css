@@ -45,6 +45,6 @@ h1 {
 .label-tag{
   background-color: #bdc3c7;
 }
-#recent-posts{
-  padding-top: 5.168px;
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
 }
