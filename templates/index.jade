@@ -48,12 +48,13 @@ html(lang="en",ng-app="Blog")
               span.label.label-tag.ng-cloak {{ tag }}
           br
           div.centered(ng-repeat="post in posts")
-            a(href="{{ post.url }}")
-              h3.ng-cloak {{ post.title }}
-            span.ng-cloak {{ post.teaser }}
-            br
-            br
-            hr
+            div.post-card
+              a(href="{{ post.url }}")
+                h3.ng-cloak {{ post.title }}
+              span.ng-cloak {{ post.teaser }}
+              br
+              br
+              hr
             //a.btn.btn-primary(href="{{ post.url }}") Read article
             
 

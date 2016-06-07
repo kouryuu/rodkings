@@ -48,3 +48,20 @@ h1 {
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
+.post-card{
+    position: relative;
+    -webkit-animation: movecards 1s; /* Chrome, Safari, Opera */
+    animation: movecards 1s;
+animation-fill-mode: forwards;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes movecards {
+    from {top: 400px;opacity: 0;}
+    to {top: 0px;opacity: 1;}
+}
+
+@keyframes movecards {
+    from {top: 400px;opacity: 0;}
+    to {top: 0px;opacity: 1;}
+}
