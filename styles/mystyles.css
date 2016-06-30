@@ -53,8 +53,14 @@ h1 {
     -webkit-animation: movecards 1s; /* Chrome, Safari, Opera */
     animation: movecards 1s;
 animation-fill-mode: forwards;
+transition: font-size 10s;
+-webkit-transition-timing-function: ease-out; /* Safari and Chrome */
+  transition-timing-function: ease-out;
 }
+.post-card:hover h3{
+  font-size: 45px;
 
+}
 /* Chrome, Safari, Opera */
 @-webkit-keyframes movecards {
     from {top: 400px;opacity: 0;}
