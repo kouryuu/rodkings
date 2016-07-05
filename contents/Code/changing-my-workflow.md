@@ -51,4 +51,4 @@ How to start
 
 If you are starting with build systems and task runners I highly recommend you do it progressively, that is start using one of these technologies (I recommend starting with **Jade** ) and try to adapt your usual workflow to such.Once you master your first build system, it will be easy to adapt yourself and become a guru of modern web development.
 
->The chains of habit are to weak too be felt, until they are too strong to be broken - Samuel Johnson
+>The chains of habit are too weak to be felt, until they are too strong to be broken - Samuel Johnson
