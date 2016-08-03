@@ -17,5 +17,9 @@
   {"title":"Changing my workflow.",
     "teaser": "The perks and benefits of adopting new web technologies.",
   "date":"06/30/2016",
-  "url":"Code/changing-my-workflow/"}]
+  "url":"Code/changing-my-workflow/"},
+  {"title":"From Zero to Hero with Yeoman.",
+    "teaser": "Starting from scratch is not always a good idea.",
+  "date":"8/02/2016",
+  "url":"Code/from-zero-to-hero/"}]
 }
