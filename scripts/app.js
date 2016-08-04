@@ -40,18 +40,19 @@ myApp.controller('mainContent',['$scope','$http','$log',function($scope,$http,$l
         $scope.posts.push(postCategory[j]);
       }
       $scope.posts = $scope.posts.sort(function(a,b){
-        var date1 = new Date(a);
-        var date2 = new Date(b);
+        var date1 = new Date(a.date);
+        var date2 = new Date(b.date);
         if(date1 < date2){
-          return -1;
+          return 1;
         }
         if(date1 > date2){
-          return 1;
+          return -1;
         }
         if(date1.valueOf() == date2.valueOf()){
           return 0;
         }
       });
+
 
     }
     $scope.$apply();
@@ -65,7 +66,7 @@ myApp.controller('mainContent',['$scope','$http','$log',function($scope,$http,$l
          drawAll(response);
        }else{
 
-         $log.log(response);
+         //$log.log(response);
         var tag = location.hash;
         tag = tag.replace("#","");
         generateJSONbyTag(tag,response);
