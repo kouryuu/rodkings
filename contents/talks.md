@@ -14,3 +14,7 @@ template: talks.jade
 - **ChilangoRails**  *Consejos para una GUI exitosa* -- [slides](http://slides.com/rodkings/deck-11)
 
 - **ChelaJS**  *User Centered design* -- [slides](http://slides.com/rodkings/chela-js)
+
+### August 2016
+
+- **ChelaJS** *From Zero to Hero with Yeoman* -- [post](/Code/from-zero-to-hero/)
