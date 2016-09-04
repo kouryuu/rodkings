@@ -14,3 +14,5 @@ template: experiments.jade
 - [generator-react-gulp-browserify-less](https://www.npmjs.com/package/generator-react-gulp-browserify-less Yeoman scaffold): This is a Yeoman generator to scaffold a project using Gulp, Browserify and Less.
 
 - [react-questionnaire](https://www.npmjs.com/package/react-questionnaire): Simple modular React components for building a questionnaire or survey.
+
+- [glass-filter](https://github.com/kouryuu/glass-filter): An image filter that uses Voronoi diagrams to make various effects.
