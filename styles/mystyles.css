@@ -1,15 +1,17 @@
-.big-img{
-  background-image:url('/imgs/bkgrnd.jpg');
+#big-img{
+  background-image:url('/imgs/bkgrnd_old.jpg');
   height:301px;
   text-align: center;
   color: #ECF0F1;
-
+  box-shadow: 0px 20px 100px -20px #ECF0F1;
+  margin-bottom: 30px;
 }
 .centered{
   text-align: center;
 }
 h1 {
   text-align: center;
+  text-shadow: 0px 0px 10px gray;
 }
 #content{
   margin-left: 5%;
