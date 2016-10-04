@@ -6,29 +6,38 @@
   box-shadow: 0px 20px 100px -20px #ECF0F1;
   margin-bottom: 30px;
 }
+
 .centered{
   text-align: center;
 }
+
 h1 {
   text-align: center;
+}
+
+.image-header {
   text-shadow: 0px 0px 10px gray;
 }
-#content{
+
+#content {
   margin-left: 5%;
   margin-right: 5%;
 }
-.ghost-img{
+
+.ghost-img {
   opacity: 0.4;
 }
-.code-img{
+
+.code-img {
   background-image: url('/imgs/codes.jpg');
   height: 500px;
 }
-.justified{
+
+.justified {
   text-align: justify;
 }
-.post img{
 
+.post img {
   max-height: 400px;
   display: list-item;
   max-width: 100%;
@@ -41,28 +50,33 @@ h1 {
   -webkit-transition: all .25s ease-in-out;
           transition: all .25s ease-in-out;
 }
-.post-list hr{
+
+.post-list hr {
   width:35%;
 }
-.label-tag{
+
+.label-tag {
   background-color: #bdc3c7;
 }
+
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
-.post-card{
+
+.post-card {
     position: relative;
     -webkit-animation: movecards 1s; /* Chrome, Safari, Opera */
     animation: movecards 1s;
-animation-fill-mode: forwards;
-transition: font-size 10s;
--webkit-transition-timing-function: ease-out; /* Safari and Chrome */
-  transition-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  transition: font-size 10s;
+  -webkit-transition-timing-function: ease-out; /* Safari and Chrome */
+    transition-timing-function: ease-out;
 }
-.post-card:hover h3{
-  font-size: 45px;
 
+.post-card:hover h3 {
+  font-size: 45px;
 }
+
 /* Chrome, Safari, Opera */
 @-webkit-keyframes movecards {
     from {top: 400px;opacity: 0;}
