@@ -1,0 +1,8 @@
+language: javascript
+sudo: false
+
+before_script:
+    - npm install
+
+script:
+    - bash build.sh
