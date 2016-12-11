@@ -1,6 +1,7 @@
 language: javascript
 sudo: false
-
+node_js:
+  - "4.3.1"
 before_script:
     - npm install
 
