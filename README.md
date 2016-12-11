@@ -26,3 +26,6 @@ Description of the project.
 2. `node_modules/gulp/bin/gulpjs generate` or `gulp generate` if gulp is installed globally.
 3. `node_modules/gulp/bin/gulpjs serve` or `gulp serve` if gulp is installed globally.
 4. A web browser should open to view the generated html.
+
+![Travis build status]
+(https://travis-ci.org/kouryuu/rodkings.svg?branch=master)
