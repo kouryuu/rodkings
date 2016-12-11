@@ -1,6 +1,6 @@
 #!/bin/bash
 metalsmith --version
-metalsmith
+./node_modules/metalsmith/bin/metalsmith
 gulp compress
 gulp imgcopy
 gulp jsoncopy
