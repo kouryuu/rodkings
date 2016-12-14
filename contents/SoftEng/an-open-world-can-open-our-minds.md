@@ -19,7 +19,7 @@ Having the source code readily available accelerates the speed to detect and fix
 Beyond software
 ---------------
 
-So the philosophy around open source is people are free to reuse and improve on things and share those improvements to all. But it does not apply solely to software. Hardware can be open-sourced like [Arduino], [Open-RISC]; but lets see far beyond that Science benefits greatly from openness.
+So the philosophy around open source is people are free to reuse and improve on things and share those improvements to all. But it does not apply solely to software. Hardware can be open-sourced like [Arduino](https://www.arduino.cc/), [Open-RISC](http://openrisc.io/); but lets see far beyond that Science benefits greatly from openness.
 For example although it is true that research centers benefit greatly from patents as they allow them to fund further research; being secretive about new findings can slow the development of improved products.
 The whole idea of Science is to organize and increase humanity's knowledge, so limiting such knowledge goes against its very principles.
 There has been several projects that follow an open source philosophy:
@@ -44,7 +44,7 @@ What can I do ?
 ---------
 
 You may be asking yourself, how can I collaborate in this movement?
-Well, the answer is **don't be afraid to share**; use a [creative commons license](https://creativecommons.org/) or a similar open-source license and let the world both see your creative works. For example this post has full [CC 4.0 License](https://creativecommons.org/licenses/by/4.0/) so you may use it in any way, even commercially. I encourage people to translate this post and spread this information to other people.It does not matter if you are an artist, a writer, a chemist, a computer programmer or a great cook; you **can** share you talents to the world. 
+Well, the answer is **don't be afraid to share**; use a [creative commons license](https://creativecommons.org/) or a similar open-source license and let the world both see your creative works. For example this post has full [CC 4.0 License](https://creativecommons.org/licenses/by/4.0/) so you may use it in any way, even commercially. I encourage people to translate this post and spread this information to other people.It does not matter if you are an artist, a writer, a chemist, a computer programmer or a great cook; you **can** share you talents to the world.
 
 Conclusions
 --------
